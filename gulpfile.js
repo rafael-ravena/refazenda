@@ -92,7 +92,7 @@ gulp.task('browser-sync', ['sass', 'js', 'pug'], function () {
  * need for vendor prefixes then live reload the browser.
  */
 gulp.task('sass', function () {
-  return gulp.src(paths.sass + '*.sass')
+  return gulp.src(paths.sass + '**/*.sass')
     .pipe(sass({
       includePaths: [paths.sass],
       outputStyle: 'compressed'
@@ -112,7 +112,7 @@ gulp.task('sass', function () {
  * Watch .pug files run pug-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
-  gulp.watch(paths.sass + '**/*.sass', ['sass']);
+  gulp.watch('./src/sass/**/*.sass', ['sass']);
   gulp.watch('./src/fonts/*',  ['fonts']);
   gulp.watch('./src/**/*.js',  ['rebuild']);
   gulp.watch('./src/img/*',    ['rebuild']);
