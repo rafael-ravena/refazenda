@@ -1,5 +1,18 @@
 {
-  "title": "Pug-Sass Starter",
-  "welcome": "Gulp Pug Sass Starter",
-  "link": "github.com/azemoh"
+  "refazenda": {
+    "deco": [
+      {"img":"/images/slides/deco-01.jpg", "alt":"Decoração"},
+      {"img":"/images/slides/deco-16.jpg", "alt":"Decoração"},
+      {"img":"/images/slides/deco-03.jpg", "alt":"Decoração"},
+      {"img":"/images/slides/deco-04.jpg", "alt":"Decoração"},
+      {"img":"/images/slides/deco-14.jpg", "alt":"Decoração"}
+    ],
+    "buffet": [
+      {"img":"/images/slides/buffet-01.jpg", "alt": "Buffet"},
+      {"img":"/images/slides/buffet-02.jpg", "alt": "Buffet"},
+      {"img":"/images/slides/buffet-03.jpg", "alt": "Buffet"},
+      {"img":"/images/slides/buffet-04.jpg", "alt": "Buffet"},
+      {"img":"/images/slides/buffet-05.jpg", "alt": "Buffet"}
+    ]
+  }
 }

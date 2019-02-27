@@ -24,7 +24,7 @@ var paths = {
   data: './src/_data/',
   js: './public/js/',
   fonts: './public/fonts',
-  images: './public/img'
+  images: './public/images'
 };
 
 /**
@@ -42,7 +42,9 @@ gulp.task('pug', function () {
       this.emit('end');
     })
     .pipe(rename(function (path) {
-      if(path.basename === 'index') { return }
+      if (path.basename === 'index') {
+        return
+      }
       path.dirname = path.basename;
       path.basename = 'index';
       path.extname = '.html';
@@ -64,13 +66,17 @@ gulp.task('fonts', function () {
 gulp.task('images', function () {
   return gulp.src('./src/img/**/*')
     .pipe(gulp.dest(paths.images))
-    .pipe(gulp.dest('.'))
+});
+
+gulp.task('icon', function () {
+  return gulp.src('./src/img/*.ico')
+    .pipe(gulp.dest(paths.public))
 });
 
 /**
  * Recompile .pug files and live reload the browser
  */
-gulp.task('rebuild', ['js', 'fonts', 'images', 'pug'], function () {
+gulp.task('rebuild', ['js', 'sass', 'fonts', 'images', 'icon', 'pug'], function () {
   browserSync.reload();
 });
 
@@ -113,16 +119,16 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
   gulp.watch('./src/sass/**/*.sass', ['sass']);
-  gulp.watch('./src/fonts/*',  ['fonts']);
-  gulp.watch('./src/**/*.js',  ['rebuild']);
-  gulp.watch('./src/img/*',    ['rebuild']);
+  gulp.watch('./src/fonts/*', ['fonts']);
+  gulp.watch('./src/**/*.js', ['rebuild']);
+  gulp.watch('./src/img/*', ['rebuild']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
   gulp.watch('./src/_data/*.json', ['rebuild']);
 
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'js', 'fonts', 'images', 'pug']);
+gulp.task('build', ['sass', 'js', 'fonts', 'images', 'icon', 'pug']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
