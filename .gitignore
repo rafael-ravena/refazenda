@@ -36,7 +36,7 @@ build/Release
 node_modules/
 jspm_packages/
 
-# processed files
+# processed output files
 public/
 
 # TypeScript v1 declaration files
