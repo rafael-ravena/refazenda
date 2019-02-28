@@ -1,26 +1,19 @@
-section#home.container-fluid
+section#refazenda.alternate.container-fluid
   .row.justify-content-md-center
-    .col-md-4.order-md-2.short-section.refazenda-container
-      a.unstyled(href='#refazenda')
-        h2.section-title.no-margin A Refazenda
-        h1.title.hide-mobile REFAZENDA
-        img.img-fluid.logo(src='/images/logo.png', alt='Refazenda festas com afeto')
-        h2.title.hide-mobile Festas com Afeto
-    .col-md-4.order-md-1.short-section
-      a.unstyled(href='#decoracao')
-        h2.section-title Decoração
-        .carousel.slide.carousel-fade(data-ride='carousel', data-interval='1500')
-          .carousel-inner
-            each item, index in refazenda.deco
-              div(class=(index === 0 ? "carousel-item active" : "carousel-item"))
-                .slide-container
-                  img(src=item.img, alt=item.alt)
-    .col-md-4.order-md-3.short-section
-      a(href='#buffet')
-        h2.section-title Buffet
-        .carousel.slide.carousel-fade(data-ride='carousel', data-interval='1500')
-          .carousel-inner
-            each item, index in refazenda.buffet
-              div(class=(index === 0 ? "carousel-item active" : "carousel-item"))
-                .slide-container
-                  img(src=item.img, alt=item.alt)
+    .logo-container.col-md-2.text-center.hide-mobile
+      img.img-fluid(src='/images/logo.png', alt='Refazenda festas com afeto')
+      h2.text-center.title Empresa com afeto
+    .col-md-6
+      h2 O que é a REFAZENDA?
+      p
+        img.pull-right.d-md-none.slide-sub(src='/images/slides/refa-01.jpg')
+        | É um projeto pessoal de Priscila Vicente, formada em gastronomia, com mais de 10 anos de experiencia em produção de eventos e apaixonada em receber bem. Com o nascimento do seu primeiro filho, tudo se juntou de uma forma mágica.
+      p No primeiro aniversário do Pedro, Priscila percebeu que aquela festa era muito mais que a comemoração de um ano. Naquele momento estavam nascendo memórias. Todo aquele ano de adaptações, aprendizados, obstáculos, desafios, e, principalmente, muito amor, estava se transformando em uma vontade imensa de comemorar e estar próxima de todos amigos e familiares, compartilhando todo este amor vivido!
+      p.destaque A REFAZENDA é uma empresa que vai muito além de fazer festas! Tem como seu objetivo transformar momentos, criar memórias e tocar pessoas!
+      p E para a festa ser completa, ela precisa ser boa para todos. Com um ambiente agradável para adultos e crianças, onde todos possam se divertir e comer comidinhas gostosas. A mamãe precisa ter fotos lindas para recordar esse momento tão especial. Mas, principalmente, o aniversariante precisa sentir que tudo aquilo foi pensado com carinho para ele!
+      p Todo esse sentimento é o que envolve e guia a REFAZENDA.
+      p Nossos clientes são nosso principal foco. Queremos que todos tenham a oportunidade de comemorar! E que as crianças possam ter momentos com muito amor e alegria, com sorrisos estampados no rosto.
+      p.destaque Por onde passarmos queremos deixar memórias de uma infância leve e feliz!
+    #refazenda-slides.col-md-4.short-section.hide-mobile
+      .slide-container
+        img(src='/images/slides/refa-01.jpg', alt='Quem somos')

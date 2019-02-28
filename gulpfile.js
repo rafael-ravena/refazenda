@@ -18,14 +18,16 @@ var references = require('gulp-hash-references');
  * Directories here
  */
 var paths = {
-  public: './public/',
+  public: '../refazenda/'
+}
+var puf = Object.assign(paths, {
   sass: './src/sass/',
-  css: './public/css/',
+  css: paths.public + 'css/',
   data: './src/_data/',
-  js: './public/js/',
-  fonts: './public/fonts',
-  images: './public/images'
-};
+  js: paths.public + 'js/',
+  fonts: paths.public + 'fonts',
+  images: paths.public + 'images'
+});
 
 /**
  * Compile .pug files and pass in data from json file

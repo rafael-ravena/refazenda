@@ -1,0 +1,26 @@
+section#home.container-fluid
+  .row.justify-content-md-center
+    .col-md-4.order-md-2.short-section.refazenda-container
+      a.unstyled(href='#refazenda')
+        h2.section-title.no-margin A Refazenda
+        h1.title.hide-mobile REFAZENDA
+        img.img-fluid.logo(src='/images/logo.png', alt='Refazenda festas com afeto')
+        h2.title.hide-mobile Festas com Afeto
+    .col-md-4.order-md-1.short-section
+      a.unstyled(href='#decoracao')
+        h2.section-title Decoração
+        .carousel.slide.carousel-fade(data-ride='carousel', data-interval='1500')
+          .carousel-inner
+            each item, index in refazenda.deco
+              div(class=(index === 0 ? "carousel-item active" : "carousel-item"))
+                .slide-container
+                  img(src=item.img, alt=item.alt)
+    .col-md-4.order-md-3.short-section
+      a(href='#buffet')
+        h2.section-title Buffet
+        .carousel.slide.carousel-fade(data-ride='carousel', data-interval='1500')
+          .carousel-inner
+            each item, index in refazenda.buffet
+              div(class=(index === 0 ? "carousel-item active" : "carousel-item"))
+                .slide-container
+                  img(src=item.img, alt=item.alt)

@@ -1,0 +1,44 @@
+section#contate-nos.container-fluid
+  .row.justify-content-md-center
+    .col-md-3.hide-mobile
+      .slide-container
+        img(src='images/recre/s-01.jpg', alt='Festa')
+    .col-md-6
+      h2.text-center.title Clique e entre em contato:
+      .row.justify-content-center
+        a.contact-icon(href='https://wa.me/5511999875635?text=Olá%21%20Gostaria%20de%20mais%20informações.', target='_blank', title='+55 11 99987-5635')
+          i.fa.fa-whatsapp.fa-2x.fa-fw
+          | Whatsapp: +55 (11) 99987-5635
+        a.contact-icon(href='tel:11999875635', target='_blank', title='11 99987-5635')
+          i.fa.fa-mobile.fa-2x.fa-fw
+          | Telefone (Vivo): (11)99987-5635
+        a.contact-icon(href='mailto:refazenda.fa@gmail.com', target='_blank', title='11 99987-5635')
+          i.fa.fa-envelope-o.fa-2x.fa-fw
+          | E-mail: refazenda.fa@gmail.com
+      h2.text-center.title Ou preencha o nosso formulário:
+      form(method='POST', action='form/')
+        .form-row
+          label.col-md-5 Nome:
+            input.form-control(name='nome', type='text', placeholder='Nome')
+          label.col-md-7 E-mail:
+            input.form-control(name='email', type='email', placeholder='E-mail')
+        .form-row
+          label.form-group.col-5.col-md-3 Data:
+            input.form-control(name='data', type='date', placeholder='Data')
+          label.form-group.col-7.col-md-4 Qtd pessoas (aprox):
+            input.form-control(name='pax', type='number', placeholder='50')
+          label.form-group.col-md-5.col-12 Tipo:
+            select.form-control(name='tipo')
+              option(value='deco+buffet', selected='selected') Buffet & Decoração
+              option(value='buffet') Buffet
+              option(value='deco') Decoração
+        .form-row
+          label.form-group.col-12 Mensagem:
+            textarea.form-control(name='mensagem', rows='4')
+        .form-row
+          .form-group.col-12
+            button.btn.btn-light.pull-left(type='reset') Cancelar
+            button.btn.btn-secondary.pull-right(type='submit') Enviar
+    .col-md-3.hide-mobile
+      .slide-container.slide-right
+        img(src='images/recre/s-01.jpg', alt='Festa')
