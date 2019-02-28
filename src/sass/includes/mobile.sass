@@ -13,7 +13,7 @@
     background-position-y: 58px
     background-size: 250vh
   .short-section 
-    max-height: 28vh
+    max-height: calc((100vh - 45px) / 3)
     overflow: hidden
     margin: 10px auto
   .logo 
@@ -23,4 +23,15 @@
       font-size: 1.5em
   .refazenda-container 
     margin: auto 15px
-  
+  .slide-container
+    width: 100%
+    position: relative
+    height: calc((100vh - 45px) / 3)
+    img
+      position: absolute
+      width: 100%
+      min-height: auto
+      max-height: initial
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
