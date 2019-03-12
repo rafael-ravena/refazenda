@@ -18,7 +18,7 @@ var references = require('gulp-hash-references');
  * Directories here
  */
 var paths = {
-  public: '../refazenda/'
+  public: './public/'
 }
 var puf = Object.assign(paths, {
   sass: './src/sass/',
