@@ -16,29 +16,30 @@ section#contate-nos.container-fluid
           i.fa.fa-envelope-o.fa-2x.fa-fw.pull-left
           | E-mail: <br />refazenda.fa@gmail.com
       h2.text-center.title Ou preencha o nosso formulário:
-      form(method='POST', action='https://us-central1-mail-sender-28ee2.cloudfunctions.net/enviarEmail')
+      //- form(method='POST', action='http://localhost:5000/mail-sender-28ee2/us-central1/enviarEmail')
+      form(method='POST', action='https://us-central1-mail-sender-28ee2.cloudfunctions.net/enviarEmail', data-behavior="send-contact")
         .form-row
           label.col-md-5 Nome:
-            input.form-control(name='nome', type='text', placeholder='Nome')
+            input.form-control(name='nome', type='text', placeholder='Nome' data-required="true")
           label.col-md-7 E-mail:
-            input.form-control(name='email', type='email', placeholder='E-mail')
+            input.form-control(name='email', type='email', placeholder='E-mail' data-required="true")
         .form-row
           label.form-group.col-5.col-md-3 Data:
-            input.form-control(name='data', type='date', placeholder='Data')
+            input.form-control(name='data', type='date', placeholder='Data' data-required="true")
           label.form-group.col-7.col-md-4 Qtd pessoas (aprox):
-            input.form-control(name='pax', type='number', placeholder='50')
+            input.form-control(name='pax', type='number', placeholder='50' data-required="true")
           label.form-group.col-md-5.col-12 Tipo:
-            select.form-control(name='tipo')
+            select.form-control(name='tipo' data-required="true")
               option(value='deco+buffet', selected='selected') Buffet & Decoração
               option(value='buffet') Buffet
               option(value='deco') Decoração
         .form-row
           label.form-group.col-12 Mensagem:
-            textarea.form-control(name='mensagem', rows='4')
+            textarea.form-control(name='mensagem', rows='4' data-required="true")
         .form-row
           .form-group.col-12
-            button.btn.btn-light.pull-left(type='reset') Cancelar
-            button.btn.btn-secondary.pull-right(type='submit') Enviar
+            button.btn.btn-light.pull-left(type='reset' data-behavior="reset-form") Cancelar
+            button.btn.btn-secondary.pull-right(type='submit' data-behavior="submit-form") Enviar
     .col-md-3.hide-mobile
       .slide-container.slide-right
         img(src='images/recre/s-01.jpg', alt='Festa')
