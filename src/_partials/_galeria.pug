@@ -1,0 +1,6 @@
+section#galeria-decoracao.container-fluid
+  .row.justify-content-md-center
+    each item, index in imagens
+      .gallery-item-container(data-behavior="gallery-item", data-src=item.img, data-alt=item.alt)
+        .gallery-item-inner
+          img(src=item.img, alt=item.alt)

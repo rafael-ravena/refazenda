@@ -35,3 +35,27 @@
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
+
+@media only screen and (min-width: 550px) and (max-width: 768px) 
+  .gallery-item-container
+    position: relative
+    width: calc(100vw / 5)
+    height: calc(100vw / 5)
+    .gallery-item-inner
+      img
+        min-width: calc(100vw / 5)
+        min-height: calc(100vw / 5)
+        max-width: calc(100vw / 3)
+        max-height: calc(100vw / 3)
+@media only screen and (max-width: 550px) 
+  .gallery-item-container
+    position: relative
+    width: calc(100vw / 4)
+    height: calc(100vw / 4)
+    .gallery-item-inner
+      img
+        min-width: calc(100vw / 4)
+        min-height: calc(100vw / 4)
+        max-width: calc(100vw / 2.5)
+        max-height: calc(100vw / 2.5)
+        

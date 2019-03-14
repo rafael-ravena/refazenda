@@ -64,41 +64,61 @@ a
       left: 0
   &:hover
     h2.section-title 
-      color: #FAAD10
+      color: #faad10
 #decoracao
   .photo-album 
     max-height: calc(100vh - 120px)
 .btn-primary 
-  background-color: #FAAD10
-  border-color: #FAAD10
+  background-color: #faad10
+  border-color: #faad10
 .btn-primary:hover 
-  background-color: #8E6B34
-  border-color: #8E6B34
+  background-color: #8e6b34
+  border-color: #8e6b34
 .btn-secondary 
   background-color: #9de4cf
   border-color: #9de4cf
 .btn-secondary:hover 
-  color: #5BA300
-  border-color: #5BA300
+  color: #5ba300
+  border-color: #5ba300
 a.unstyled 
   text-decoration: none
-  color: #FAAD10
-a.contact-icon 
-  display: block
+  color: #faad10
+a.contact-icon
+  display: table
   margin: 5px 15px
   padding: 5px
   width: 100%
-  background-color: #9de4cf
+  background-color: rbga(255,255,255,.95)
   text-decoration: none
   font-weight: bold
-  color: #ffffff
+  color: #8e6b34
   font-family: Oregano, cursive
   font-size: 1.5em
+  border: 1px solid
+  .text-container
+    display: table-cell
+    vertical-align: middle
+    text-align: left
+    width: 100%
+  .fa
+    margin-right: 0
+  &.whatsapp
+    border-color: #43d463
+    .fa
+      color: #43d463
+  &.phone
+    border-color: #ffc107
+    .fa
+      color: #ffc107
+  &.mail
+    border-color: #17a2b8
+    .fa
+      color: #17a2b8
 a.contact-icon:first-child 
   margin-top: 0px
 a.contact-icon:last-child 
   margin-bottom: 20px
 a.contact-icon:hover 
-  color: #5BA300
+  color: #5ba300
 .form-control 
-  border-color: #FAAD10
+  border-color: #faad10
