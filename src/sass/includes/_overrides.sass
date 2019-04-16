@@ -1,0 +1,36 @@
+#toast-container.toast-top-center
+  top: calc(50% - 100px)
+  *
+    font-family: Oregano, cursive
+    font-size: 1.15em
+  &:before
+    content: " "
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(0,0,0,.8)
+  .toast
+    width: 50vw
+    max-width: initial
+
+label.error
+  position: absolute
+  right: 5px
+  left: 5px
+  margin: 5px 0px
+  padding: 5px
+  z-index: 999
+  color: #990000
+  background-color: rgba(255,185,185,.9)
+  font-size: .75em
+  &:before
+    content: " "
+    position: absolute
+    left: 10px
+    top: -15px
+    z-index: 998
+    border-width: 15px 15px 0px 0px
+    border-style: solid
+    border-color: transparent #ffbbbb transparent transparent
